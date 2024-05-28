@@ -3,17 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estamos em Manutenção</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Eval</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #2B579A, #1B3A57);
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background: #1B3A57;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .content-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .content-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .content-section img {
+            width: 30%;
+            margin: 0 20px;
+            border-radius: 10px;
+        }
+        .content-section p {
+            width: 70%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: #1B3A57;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .content-section:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+        .content-section:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+        .content-section:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Eval</h1>
-        <h2>Estamos em Manutenção</h2>
-        <p>Desculpe o transtorno. Voltaremos em breve!</p>
-        <p id="countdown"></p>
-        <a href="https://wa.me/+5514997924346" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
+    <header>
+        Eval
+    </header>
+    <div class="content">
+        <div class="content-section">
+            <img src="bot.jpg" alt="Imagem 1">
+            <p>Na Eval, nossa missão é revolucionar a forma como as empresas operam, utilizando soluções avançadas de automação. Nossos sistemas automatizados são projetados para otimizar processos, aumentar a eficiência e reduzir custos operacionais. Com a nossa tecnologia, seus negócios podem alcançar novos patamares de produtividade.</p>
+        </div>
+        <div class="content-section">
+            <img src="bot2.jpg" alt="Imagem 2">
+            <p>Especialistas em chatbots, fornecemos assistentes virtuais inteligentes que melhoram a interação com os clientes. Nossos chatbots são desenvolvidos para entender e responder a consultas de maneira natural e eficaz, oferecendo suporte 24/7 e garantindo uma experiência de usuário excepcional. Seja para atendimento ao cliente, vendas ou suporte técnico, temos a solução ideal.</p>
+        </div>
+        <div class="content-section">
+            <img src="bot3.jpg" alt="Imagem 3">
+            <p>Nosso compromisso com a inovação nos permite oferecer soluções personalizadas que atendem às necessidades específicas de cada cliente. Trabalhamos em parceria com sua empresa para identificar oportunidades de automação e implementar tecnologias que proporcionem um retorno sobre o investimento significativo. Na Eval, sua satisfação é nossa prioridade.</p>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <footer>
+        <p>Endereço: Rua João Medaglia, 370, Vila São José, Piraju, São Paulo</p>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=61559638586969" target="_blank">Facebook</a> | 
+            <a href="https://www.instagram.com/eval_chatbots" target="_blank">Instagram</a> | 
+            <a href="https://wa.me/+5514997924346" target="_blank">WhatsApp</a>
+        </p>
+    </footer>
 </body>
 </html>
